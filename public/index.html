@@ -3,22 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tempel van Transformatie – Kamer 1</title>
+  <title>Tempel van Transformatie – Aïon</title>
 </head>
 <body style="font-family: sans-serif; padding: 2rem; background-color: #f5f5f5;">
-  <h2>Vraag aan Aïon (Kamer 1)</h2>
+  <h2 id="kamertitel">Vraag aan Aïon (Kamer 1)</h2>
+
+  <label for="kamer">Kies een Kamer:</label>
+  <select id="kamer" onchange="updateKamer()">
+    <option value="1" selected>Kamer 1</option>
+    <option value="2">Kamer 2</option>
+  </select>
+
+  <br/><br/>
+
   <textarea id="userInput" rows="6" cols="60" placeholder="Typ hier je input voor Aïon..."></textarea><br/><br/>
   <button onclick="vraagAion()">Verstuur</button>
+
   <p id="antwoord" style="margin-top: 2rem; background: #fff; padding: 1rem; border-radius: 6px;"></p>
 
   <script>
+    function updateKamer() {
+      const kamer = document.getElementById("kamer").value;
+      document.getElementById("kamertitel").innerText = `Vraag aan Aïon (Kamer ${kamer})`;
+    }
+
     async function vraagAion() {
       const input = document.getElementById("userInput").value;
+      const kamer = parseInt(document.getElementById("kamer").value);
       const response = await fetch("/api/aion", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ userInput: input })
+        body: JSON.stringify({ kamer: kamer, userInput: input })
       });
+
       const data = await response.json();
       document.getElementById("antwoord").innerText = data.reply || "Geen antwoord ontvangen.";
     }
