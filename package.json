@@ -1,0 +1,14 @@
+{
+  "name": "tot-backend",
+  "version": "1.0.0",
+  "description": "Aïon als begeleider in de Tempel van Transformatie",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1",
+    "node-fetch": "^2.6.11"
+  }
+}
