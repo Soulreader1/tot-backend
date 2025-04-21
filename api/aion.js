@@ -22,6 +22,17 @@ const kamerPrompts = {
 - Beneden / Metaal – ACIM: “Ik heb alles wat ik in deze kamer zie alle betekenis gegeven die het voor mij heeft.”
 - Boven / Hout – STK: “Kennis is met mij. Waar ben ik?”
     `
+  },
+  3: {
+    naam: "Kamer 3",
+    broncodes: `
+- Noord / Water – Janduz: Een vrouw gezeten op een stoeltje die aan het praten is met iemand buiten beeld. Dieper in het boudoir ligt een naakte vrouw in wulpse houding op een tapijt.
+- Oost / Lucht – Charubel: Een man die voortspiedt op een paard, zwaard in de hand, om een groep gewapende mannen te ontmoeten.
+- Zuid / Vuur – Kozminsky: Een prins die een kind redt uit een brandend kasteel.
+- West / Aarde – Sabian: Het camee-profiel van een man in de omtreklijn van zijn land.
+- Beneden / Metaal – ACIM: “Ik begrijp niets wat ik in deze kamer zie.”
+- Boven / Hout – STK: “Wat weet ik werkelijk?”
+    `
   }
 };
 
